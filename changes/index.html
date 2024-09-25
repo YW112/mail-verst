@@ -81,7 +81,7 @@
             max-width: 552px;
         }
         .btn-now {
-            display: flex;
+            display: inline-flex;
             justify-self: first baseline;
             flex-direction: row;
             justify-content: center;
@@ -100,16 +100,17 @@
             text-decoration: none;
         }
         .change-data {
-            box-sizing: border-box;
-            display: flex;
+            display: inline-flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             padding: 0.5vw 1.2vw;
             gap: 10px;
             min-width: 192px;
+            width: 192px;
+            max-width: 192px;
             height: 48px;
-            background: #FFFFFF;
+            background-color: #FFFFFF;
             border: 2px solid #C9CFF1;
             border-radius: 10px;
             font-style: normal;
@@ -279,7 +280,7 @@
                 width: 75vw;
             }
             .contact-us {
-                min-width: 70vw;
+                min-width: 288px;
                 max-width: 552px;
             }
         }
@@ -294,7 +295,7 @@
                 display: flex;
             }
             .bg-welcome {
-                width: 552px;
+                max-width: 552px;
                 height: 252px;
                 gap: 0px;
                 min-width: 40vw;
@@ -346,62 +347,60 @@
         <td>
             <table role="presentation" cellpadding="0" cellspacing="0" bg-color="#FFFFFF" style="background-color: #FFFFFF;" align="center" class="main-msg">
                 <tbody>
-                <tr>
-                    <td align="center">
-                        <div class="bg-welcome"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h1 class="hello-user">
-                            Добрый день, ${name}!
-                        </h1>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="desk-access" style='flex-direction: row; align-items: flex-start; padding: 0px; min-width: 552px; height: 40px;'>
-                            Вам предоставлен доступ на&nbsp;платформу &laquo;Дистанционный офис. Облако&raquo; компании ${companyName}.
-                        </p>
-                        <p class="mob-access" style='flex-direction: row; align-items: flex-start; padding: 0px; min-width: 552px; height: 40px;'>
-                            Вам предоставлен доступ на <br> платформу &laquo;Дистанционный офис. <br> Облако&raquo; компании ${companyName}.
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="desk-user-data" style="flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; width: 552px; height: 25px; font-style: normal; font-weight: 700; font-size: 20px; line-height: 25px; color: #161F33;">
-                            <b>
-                                Ваши данные для входа в&nbsp;личный кабинет
-                            </b>
-                        </p>
-                        <p class="mob-user-data" style="flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; width: 552px; height: 25px; font-style: normal; font-weight: 700; font-size: 20px; line-height: 25px; color: #161F33;">
-                            <b>
-                                Ваши данные для входа в <br>личный кабинет
-                            </b>
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="email-pass">
-                        <p>Email: ${email} <br>
-                            Пароль: ${password}
-                        </p>
-                    </td>
-                </tr>
-                </tbody>
-                </table>
-                <tr align="left" style="width: 162px; max-width: 170px; min-width: 162px; min-height: 48px">
-                    <td rowspan="2" width="162px"class="btn-now" style="max-width: 170px; min-width: 162px; min-height: 48px; text-wrap: nowrap; display: flex; border: 1px solid #101A7D; border-radius: 10px; background: #101A7D;">
-                        <form>
-                            <a style="text-decoration: none; text-decoration-line: none; font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF;" href="${companyDomain}" target="_blank">
-                                <buton style="font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF; border-radius: 10px; text-decoration: none; background: #101A7D;" rel="noopener">
-                                    Начать сейчас
-                                </button>
-                            </a>
-                            </buton>
-                    </td>
-                </tr>
+                    <tr>
+                        <td align="center">
+                            <div class="bg-welcome"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1 class="hello-user">
+                                Добрый день, ${name}!
+                            </h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="desk-access" style='flex-direction: row; align-items: flex-start; padding: 0px; min-width: 552px; height: 40px;'>
+                                Вам предоставлен доступ на&nbsp;платформу &laquo;Дистанционный офис. Облако&raquo; компании ${companyName}.
+                            </p>
+                            <p class="mob-access" style='flex-direction: row; align-items: flex-start; padding: 0px; min-width: 552px; height: 40px;'>
+                                Вам предоставлен доступ на <br> платформу &laquo;Дистанционный офис. <br> Облако&raquo; компании ${companyName}.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="desk-user-data" style="flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; width: 552px; height: 25px; font-style: normal; font-weight: 700; font-size: 20px; line-height: 25px; color: #161F33;">
+                                <b>
+                                    Ваши данные для входа в&nbsp;личный кабинет
+                                </b>
+                            </p>
+                            <p class="mob-user-data" style="flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; width: 552px; height: 25px; font-style: normal; font-weight: 700; font-size: 20px; line-height: 25px; color: #161F33;">
+                                <b>
+                                    Ваши данные для входа в <br>личный кабинет
+                                </b>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="email-pass">
+                            <p>Email: ${email} <br>
+                                Пароль: ${password}
+                            </p>
+                        </td>
+                    </tr>
+                            <tr style=" font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF; display: inline-flex; width: 162px; max-width: 170px; min-width: 162px; min-height: 48px">
+                                <td width="162px" class="btn-now" style="color: #FFFFFF;">
+                                    <form style="color: #FFFFFF; text-decoration: none; text-decoration-line: none;">
+                                        <a style="text-decoration: none; text-decoration-line: none; font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF;" href="${companyDomain}" target="_blank">
+                                            <buton style="text-align: center; font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF; border-radius: 10px; text-decoration: none; background: #101A7D;" rel="noopener">
+                                                Начать сейчас
+                                            </button>
+                                        </a>
+                                        </buton>
+                                </td>
+                            </tr>
                 <tr>
                     <td>
                         <hr>
@@ -409,19 +408,19 @@
                 </tr>
                 <tr>
                     <td>
-                        <p class="desk-rec-first-use" style="width: 552px; height: 80px; font-family: 'Helvetica'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; color: #161F33;">
+                        <p class="desk-rec-first-use" style="width: 552px; height: 80px; font-family: 'Helvetica'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; color: #161F33; text-wrap: wrap;">
                             При первом доступе рекомендуем Вам изменить пароль через настройки профиля пользователя в&nbsp;пункте &laquo;Безопасность&raquo;, а&nbsp;также заполнить личную информацию в&nbsp;карточке профиля: фото, email, номер телефона, дата рождения и&nbsp;город текущего местоположения
                         </p>
-                        <p class="mob-rec-first-use">
+                        <p class="mob-rec-first-use" style="text-wrap: wrap">
                             При первом доступе рекомендуем <br> Вам изменить пароль через <br> настройки профиля пользователя в <br> пункте &laquo;Безопасность&raquo;, а&nbsp;также <br> заполнить личную информацию в <br> карточке профиля: фото, email, <br> номер телефона, дата рождения и <br>город текущего местоположени
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <form style="border: 1px #101A7D;">
+                        <form style="background-color: #FFFFFF; border: 2px solid #C9CFF1; text-decoration: none; text-decoration-line: none; color: #101A7D;">
                             <a href="${companyDomain}" target="_blank">
-                                <button class="change-data">
+                                <button style="min-width: 192px; width: 192px; max-width: 192px;" class="change-data">
                                     Изменить данные
                                 </button>
                             </a>
@@ -435,11 +434,11 @@
                         </p>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <a href="mailto:${this.config.getFrom()}" target="_blank">
-                                <button style="margin: 0 auto; min-height: 68px; border: 0; display: flex; flex-direction: row; justify-content: center; align-items: flex-start; padding: 24px 16px; gap: 16px; background: #4BC77C; border-radius: 8px; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; text-align: center; color: #FFFFFF;" class="contact-us" target="_blank">
+                <tr style="min-width: 288px; max-width: 552px">
+                    <td style="text-decoration: none; text-decoration-line: none; min-width: 288px; max-width: 552px">
+                        <form style="text-decoration: none; text-decoration-line: none; min-width: 288px; max-width: 552px">
+                            <a style="text-decoration: none; text-decoration-line: none; min-width: 288px; max-width: 552px" href="mailto:${this.config.getFrom()}" target="_blank">
+                                <button style="min-width: 288px; max-width: 552px; margin: 0 auto; min-height: 68px; border: 0; display: flex; flex-direction: row; justify-content: center; align-items: flex-start; padding: 24px 16px; gap: 16px; background: #4BC77C; border-radius: 8px; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; text-align: center; color: #FFFFFF;" class="contact-us" target="_blank">
                                     Мы на связи 24/7
                                 </button>
                             </a>

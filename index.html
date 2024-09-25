@@ -1,5 +1,5 @@
 <!DOCTYPE html
-PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -29,7 +29,8 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
             font-family: 'Helvetica', 'Arial', sans-serif;
         }
         a {
-            text-decoration: none !important;
+            text-decoration: none;
+            text-decoration-line: none;
         }
         body {
             font-family: 'Helvetica', 'Arial', sans-serif;
@@ -76,52 +77,53 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
             position: absolute;
         }
         .contact-us {
-                width: 70vw;
-                max-width: 552px;
-            }
+            width: 70vw;
+            max-width: 552px;
+        }
         .btn-now {
-                display: flex;
-                justify-self: first baseline;
-                flex-direction: row;
-                justify-content: center;
-                justify-self: start;
-                align-items: center;
-                gap: 10px;
-                width: 162px;
-                height: 48px;
-                background: #101A7D;
-                border-radius: 10px;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 17px;
-                color: #FFFFFF;
-                text-decoration: none;
+            display: inline-flex;
+            justify-self: first baseline;
+            flex-direction: row;
+            justify-content: center;
+            justify-self: start;
+            align-items: center;
+            gap: 10px;
+            width: 162px;
+            height: 48px;
+            background: #101A7D;
+            border-radius: 10px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 17px;
+            color: #FFFFFF;
+            text-decoration: none;
         }
         .change-data {
-                box-sizing: border-box;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                padding: 0.5vw 1.2vw;
-                gap: 10px;
-                min-width: 192px;
-                height: 48px;
-                background: #FFFFFF;
-                border: 2px solid #C9CFF1;
-                border-radius: 10px;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 17px;
-                display: flex;
-                align-items: center;
-                text-align: center;
-                color: #101A7D;
-                text-wrap: nowrap;
-                margin-top: 10%;
-            }
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5vw 1.2vw;
+            gap: 10px;
+            min-width: 192px;
+            width: 192px;
+            max-width: 192px;
+            height: 48px;
+            background-color: #FFFFFF;
+            border: 2px solid #C9CFF1;
+            border-radius: 10px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 17px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #101A7D;
+            text-wrap: nowrap;
+            margin-top: 10%;
+        }
         .contact-us {
             display: flex;
             flex-direction: row;
@@ -142,7 +144,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
             color: #FFFFFF;
         }
         .btn-now {
-            max-width: 30vw;
+            max-width: 200px;
             min-width: 162px;
             min-height: 48px;
             text-wrap: nowrap;
@@ -197,7 +199,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                 color: #161F33;
             }
             .bg-welcome {
-                background-image: url('./img/welcome-mob.png');
+                background-image: url('https://application.s1.distoffice.wormsoft.ru/img/welcome-mob.png');
                 width: 288px;
                 height: 258px;
                 margin: 0 auto;
@@ -243,7 +245,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                 padding-bottom: 6vw;
             }
             .btn-now {
-                display: inline;
+                display: inline-flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
@@ -278,10 +280,10 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                 width: 75vw;
             }
             .contact-us {
-                min-width: 70vw;
+                min-width: 288px;
                 max-width: 552px;
             }
-    }
+        }
         @media (min-width: 800px) {
             .desk-rec-first-use {
                 display: flex;
@@ -293,14 +295,14 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
                 display: flex;
             }
             .bg-welcome {
-                width: 552px;
+                max-width: 552px;
                 height: 252px;
                 gap: 0px;
                 min-width: 40vw;
-                background-image: url('https://i.ibb.co/3y6fntw/welcome-screen.png');
+                background-image: url('https://application.s1.distoffice.wormsoft.ru/img/welcome-screen.png');
                 background-repeat: no-repeat;
                 margin: 0 auto;
-        }
+            }
             .email-pass {
                 display: flex;
                 flex-direction: row;
@@ -318,137 +320,143 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
         }
     </style>
     <!--[if (gte mso 9) | (IE)]>
-      <style type="text/css">
+    <style type="text/css">
         table {
-          border-collapse: collapse !important;
+            border-collapse: collapse !important;
         }
-      </style>
+    </style>
     <![endif]-->
 
     <!--[if (gte mso 9) | (IE)]>
-      <xml>
+    <xml>
         <o:OfficeDocumentSettings>
-          <o:AllowPNG />
-          <o:PixelsPerInch>96</o:PixelsPerInch>
+            <o:AllowPNG />
+            <o:PixelsPerInch>96</o:PixelsPerInch>
         </o:OfficeDocumentSettings>
-      </xml>
+    </xml>
     <![endif]-->
 </head>
 <body style="font-family: Arial, sans-serif; font-size: 14px; color: #333" bgcolor="#EDEEF5">
-    <!--header - изображение Добро пожаловать-->
-    <table class="bg-with-cloud" border="0" role="presentation" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 600px;">
-      <tbody>
-        <tr>
-            <td align="center">
-                <img border="0" class="cloud" width="60" height="35" src="./img/cloud.png" alt="svg-cloud">
-                  <tr>
-                    <td>
-                        <table role="presentation" cellpadding="0" cellspacing="0" bg-color="#FFFFFF" style="background-color: #FFFFFF;" align="center" class="main-msg">
-                            <tbody>
-                                <tr>
-                                    <td align="center">
-                                        <div class="bg-welcome"></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h1 class="hello-user">
-                                            Добрый день, Иван!
-                                        </h1>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p class="desk-access" style='flex-direction: row; align-items: flex-start; padding: 0px; min-width: 552px; height: 40px;'>
-                                            Вам предоставлен доступ на&nbsp;платформу &laquo;Дистанционный офис. Облако&raquo; компании Team.
-                                        </p>
-                                        <p class="mob-access" style='flex-direction: row; align-items: flex-start; padding: 0px; min-width: 552px; height: 40px;'>
-                                            Вам предоставлен доступ на <br> платформу &laquo;Дистанционный офис. <br> Облако&raquo; компании Team.
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p class="desk-user-data" style="flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; width: 552px; height: 25px; font-style: normal; font-weight: 700; font-size: 20px; line-height: 25px; color: #161F33;">
-                                            <b>
-                                                Ваши данные для входа в&nbsp;личный кабинет
-                                            </b>
-                                        </p>
-                                        <p class="mob-user-data" style="flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; width: 552px; height: 25px; font-style: normal; font-weight: 700; font-size: 20px; line-height: 25px; color: #161F33;">
-                                            <b>
-                                                Ваши данные для входа в <br>личный кабинет
-                                            </b>
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="email-pass">
-                                        <p>Email: Christinavu@mail.ru <br>
-                                        Пароль: Тестович
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="btn-now" style="display: flex; border: 1px solid #101A7D; border-radius: 10px; background: #101A7D;">
-                                        <form>
-                                            <buton style="font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF; border-radius: 10px; text-decoration: none; background: #101A7D;" rel="noopener" href="https://demo.s1.stage.do.dgtl.market" target="_blank">
+<!--header - изображение Добро пожаловать-->
+<table class="bg-with-cloud" border="0" role="presentation" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 600px;">
+    <tbody>
+    <tr>
+        <td align="center">
+            <img border="0" class="cloud" width="60" height="35" src="https://application.s1.distoffice.wormsoft.ru/img/cloud.png" alt="svg-cloud">
+    <tr>
+        <td>
+            <table role="presentation" cellpadding="0" cellspacing="0" bg-color="#FFFFFF" style="background-color: #FFFFFF;" align="center" class="main-msg">
+                <tbody>
+                    <tr>
+                        <td align="center">
+                            <div class="bg-welcome"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1 class="hello-user">
+                                Добрый день, ${name}!
+                            </h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="desk-access" style='flex-direction: row; align-items: flex-start; padding: 0px; min-width: 552px; height: 40px;'>
+                                Вам предоставлен доступ на&nbsp;платформу &laquo;Дистанционный офис. Облако&raquo; компании ${companyName}.
+                            </p>
+                            <p class="mob-access" style='flex-direction: row; align-items: flex-start; padding: 0px; min-width: 552px; height: 40px;'>
+                                Вам предоставлен доступ на <br> платформу &laquo;Дистанционный офис. <br> Облако&raquo; компании ${companyName}.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="desk-user-data" style="flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; width: 552px; height: 25px; font-style: normal; font-weight: 700; font-size: 20px; line-height: 25px; color: #161F33;">
+                                <b>
+                                    Ваши данные для входа в&nbsp;личный кабинет
+                                </b>
+                            </p>
+                            <p class="mob-user-data" style="flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; width: 552px; height: 25px; font-style: normal; font-weight: 700; font-size: 20px; line-height: 25px; color: #161F33;">
+                                <b>
+                                    Ваши данные для входа в <br>личный кабинет
+                                </b>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="email-pass">
+                            <p>Email: ${email} <br>
+                                Пароль: ${password}
+                            </p>
+                        </td>
+                    </tr>
+                            <tr align="left" style=" font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF; display: inline-flex; width: 162px; max-width: 170px; min-width: 162px; min-height: 48px">
+                                <td width="162px" class="btn-now" style="color: #FFFFFF;">
+                                    <form style="color: #FFFFFF; text-decoration: none; text-decoration-line: none;">
+                                        <a style="text-decoration: none; text-decoration-line: none; font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF;" href="${companyDomain}" target="_blank">
+                                            <buton style="text-align: center; font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF; border-radius: 10px; text-decoration: none; background: #101A7D;" rel="noopener">
                                                 Начать сейчас
                                             </button>
+                                        </a>
                                         </buton>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <hr>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p class="desk-rec-first-use" style="width: 552px; height: 80px; font-family: 'Helvetica'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; color: #161F33;">
-                                            При первом доступе рекомендуем Вам изменить пароль через настройки профиля пользователя в&nbsp;пункте &laquo;Безопасность&raquo;, а&nbsp;также заполнить личную информацию в&nbsp;карточке профиля: фото, email, номер телефона, дата рождения и&nbsp;город текущего местоположения
-                                        </p>
-                                        <p class="mob-rec-first-use">
-                                            При первом доступе рекомендуем <br> Вам изменить пароль через <br> настройки профиля пользователя в <br> пункте &laquo;Безопасность&raquo;, а&nbsp;также <br> заполнить личную информацию в <br> карточке профиля: фото, email, <br> номер телефона, дата рождения и <br>город текущего местоположени
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <form target="_blank" style="border: 1px #101A7D;">
-                                            <button class="change-data">
-                                                Изменить данные
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p class="user-inst" style="text-wrap: wrap; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; color: #161F33;">
-                                            Во вложении Вы найдете Руководство пользователя.
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <form>
-                                            <button style="margin: 0 auto; min-height: 68px; border: 0; display: flex; flex-direction: row; justify-content: center; align-items: flex-start; padding: 24px 16px; gap: 16px; background: #4BC77C; border-radius: 8px; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; text-align: center; color: #FFFFFF;" class="contact-us" target="_blank">
-                                                Мы на связи 24/7
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                </td>
+                            </tr>
+                <tr>
+                    <td>
+                        <hr>
                     </td>
-                  </tr>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="desk-rec-first-use" style="width: 552px; height: 80px; font-family: 'Helvetica'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; color: #161F33; text-wrap: wrap;">
+                            При первом доступе рекомендуем Вам изменить пароль через настройки профиля пользователя в&nbsp;пункте &laquo;Безопасность&raquo;, а&nbsp;также заполнить личную информацию в&nbsp;карточке профиля: фото, email, номер телефона, дата рождения и&nbsp;город текущего местоположения
+                        </p>
+                        <p class="mob-rec-first-use" style="text-wrap: wrap">
+                            При первом доступе рекомендуем <br> Вам изменить пароль через <br> настройки профиля пользователя в <br> пункте &laquo;Безопасность&raquo;, а&nbsp;также <br> заполнить личную информацию в <br> карточке профиля: фото, email, <br> номер телефона, дата рождения и <br>город текущего местоположени
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form style="background-color: #FFFFFF; border: 2px solid #C9CFF1; text-decoration: none; text-decoration-line: none; color: #101A7D;">
+                            <a href="${companyDomain}" target="_blank">
+                                <button style="min-width: 192px; width: 192px; max-width: 192px;" class="change-data">
+                                    Изменить данные
+                                </button>
+                            </a>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="user-inst" style="text-wrap: wrap; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; color: #161F33;">
+                            Во вложении Вы найдете Руководство пользователя.
+                        </p>
+                    </td>
+                </tr>
+                <tr style="min-width: 288px; max-width: 552px">
+                    <td style="text-decoration: none; text-decoration-line: none; min-width: 288px; max-width: 552px">
+                        <form style="text-decoration: none; text-decoration-line: none; min-width: 288px; max-width: 552px">
+                            <a style="text-decoration: none; text-decoration-line: none; min-width: 288px; max-width: 552px" href="mailto:${this.config.getFrom()}" target="_blank">
+                                <button style="min-width: 288px; max-width: 552px; margin: 0 auto; min-height: 68px; border: 0; display: flex; flex-direction: row; justify-content: center; align-items: flex-start; padding: 24px 16px; gap: 16px; background: #4BC77C; border-radius: 8px; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; text-align: center; color: #FFFFFF;" class="contact-us" target="_blank">
+                                    Мы на связи 24/7
+                                </button>
+                            </a>
+                        </form>
+                    </td>
+                </tr>
                 </tbody>
-              </table>
-              <br/>
-            </center>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+
 </body>
 </html>
