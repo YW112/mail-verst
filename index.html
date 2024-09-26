@@ -7,14 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Письмо Добро Пожаловать</title>
     <style type="text/css">
-        .desk-rec-first-use {
-            display: none;
-        }
         .desk-access {
-            display: none;
+            width: 288px;
         }
         .desk-user-data {
-            display: none;
+            display: flex;
+            width: 288px;
         }
         .mob-rec-first-use {
             display: none;
@@ -76,10 +74,6 @@
             margin: 0 auto;
             position: absolute;
         }
-        .contact-us {
-            width: 70vw;
-            max-width: 552px;
-        }
         .btn-now {
             display: inline-flex;
             justify-self: first baseline;
@@ -98,32 +92,9 @@
             line-height: 17px;
             color: #FFFFFF;
             text-decoration: none;
-        }
-        .change-data {
-            display: inline-flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 0.5vw 1.2vw;
-            gap: 10px;
-            min-width: 192px;
-            width: 192px;
-            max-width: 192px;
-            height: 48px;
-            background-color: #FFFFFF;
-            border: 2px solid #C9CFF1;
-            border-radius: 10px;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 17px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: #101A7D;
             text-wrap: nowrap;
-            margin-top: 10%;
         }
+
         .contact-us {
             display: flex;
             flex-direction: row;
@@ -133,8 +104,6 @@
             gap: 16px;
             background: #4BC77C;
             border-radius: 8px;
-            min-width: 256px;
-            max-width: 552px;
             height: 20px;
             font-style: normal;
             font-weight: 400;
@@ -144,30 +113,37 @@
             color: #FFFFFF;
         }
         .btn-now {
-            max-width: 200px;
-            min-width: 162px;
-            min-height: 48px;
+            width: 162px;
+            height: 48px;
             text-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
         }
 
         @media (max-width: 554px) {
         .btn-now {
             position: absolute;
             left: 7%;
+            text-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
         }
         }
         @media (max-width: 799px) {
+            .a-contact {
+            width: 288px;
+            }
             .main-msg {
                 padding-left: 3vw;
                 box-sizing: border-box;
                 display: flex;
+                height: 80vh;
                 flex-direction: column;
                 align-items: center;
                 align-self: flex-start;
                 gap: 16px;
-                min-width: 80vw;
-                max-width: 90vw;
-                min-height: 1072.14px;
+                width: 80vw;
+                height: 1472.14px;
                 background: #FFFFFF;
                 border: 1px solid #c3c9d4;
             }
@@ -206,9 +182,25 @@
                 color: #161F33;
             }
             .bg-welcome {
-                background-image: url('./img/welcome-mob.png');
+                background: url('./img/svg-welcome-mob.svg');
                 width: 288px;
                 height: 258px;
+                margin: 0 auto;
+            }
+            .desk-rec-first-use {
+                position: static;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 0px;
+                width: 288px;
+                height: 160px;
+                font-family: 'Helvetica';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #161F33;
                 margin: 0 auto;
             }
             .mob-rec-first-use {
@@ -252,7 +244,9 @@
                 padding-bottom: 6vw;
             }
             .btn-now {
+                text-align: center;
                 display: inline-flex;
+                text-wrap: nowrap;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
@@ -287,27 +281,32 @@
             hr {
                 width: 75vw;
             }
-            .contact-us {
-                min-width: 288px;
-                max-width: 552px;
-            }
         }
         @media (min-width: 800px) {
+            .a-contact {
+            width: 552px;
+        }
             .desk-rec-first-use {
                 display: flex;
+                width: 552px;
+                height: 160px;
+                flex-direction: row;
             }
             .desk-access {
                 display: flex;
+                text-wrap: wrap;
+                width: 552px;
             }
             .desk-user-data {
                 display: flex;
+                width: 552px;
             }
             .bg-welcome {
-                max-width: 552px;
+                width: 552px;
                 height: 252px;
                 gap: 0px;
                 min-width: 40vw;
-                background-image: url('./img/welcome-screen.png');
+                background: url('./img/svg-welcome-desk.svg');
                 background-repeat: no-repeat;
                 margin: 0 auto;
             }
@@ -324,6 +323,9 @@
                 line-height: 20px;
                 color: #161F33;
                 padding-bottom: 8%;
+            }
+            .contact-us {
+                width: 552px;
             }
         }
     </style>
@@ -346,67 +348,82 @@
 </head>
 <body style="font-family: Arial, sans-serif; font-size: 14px; color: #333" bgcolor="#EDEEF5">
 <!--header - изображение Добро пожаловать-->
-<table class="bg-with-cloud" border="0" role="presentation" cellpadding="0" cellspacing="0" style="width: 100%; max-width: 600px;">
+<table class="bg-with-cloud" border="0" role="presentation" cellpadding="0" cellspacing="0" style="width: 600px;">
     <tbody>
     <tr>
         <td align="center">
-            <img border="0" class="cloud" width="60" height="35" src="./img/cloud-icon.svg" alt="svg-cloud">
+            <!-- <img align="center" border="0" class="cloud" width="60" height="35" src="https://i.ibb.co/zRLpsnQ/cloud.png" alt="cloud" border="0"> -->
+            <svg align="center" border="0" class="cloud" width="60" height="35" viewBox="0 0 60 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="60" height="35" fill="url(#pattern0_2_597)"/>
+                <defs>
+                <pattern id="pattern0_2_597" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_2_597" transform="matrix(0.00350877 0 0 0.00601504 0 -0.00225564)"/>
+                </pattern>
+                <image id="image0_2_597" width="285" height="167" xlink:href="data:image/png;base64,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"/>
+                </defs>
+                </svg>
+                
+        </td>
+    </tr>
     <tr>
         <td>
             <table role="presentation" cellpadding="0" cellspacing="0" bg-color="#FFFFFF" style="background-color: #FFFFFF;" align="center" class="main-msg">
                 <tbody>
                     <tr>
                         <td align="center">
-                            <div class="bg-welcome"></div>
+                            <div class="bg-welcome">
+                                <!-- <img src="https://i.ibb.co/3y6fntw/welcome-screen.png" alt="welcome-screen" border="0"> -->
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <h1 class="hello-user">
+                            <h1 style="color: #161F33;" class="hello-user">
                                 Добрый день, ${name}!
                             </h1>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p class="desk-access" style='flex-direction: row; align-items: flex-start; padding: 0px; min-width: 552px; height: 40px;'>
-                                Вам предоставлен доступ на&nbsp;платформу &laquo;Дистанционный офис. Облако&raquo; компании ${companyName}.
+                            <p class="desk-access" style='color: #161F33; display: flex; flex-direction: row; align-items: flex-start; padding: 0px; text-wrap: wrap; flex-direction: row; align-items: flex-start; padding: 0px; height: 40px;'>
+                                Вам предоставлен доступ на платформу &laquo;Дистанционный офис. Облако&raquo; компании ${companyName}.
                             </p>
-                            <p class="mob-access" style='flex-direction: row; align-items: flex-start; padding: 0px; min-width: 552px; height: 40px;'>
+                            <!-- <p class="mob-access" style='flex-direction: row; align-items: flex-start; padding: 0px; width: 552px; height: 40px;'>
                                 Вам предоставлен доступ на <br> платформу &laquo;Дистанционный офис. <br> Облако&raquo; компании ${companyName}.
-                            </p>
+                            </p> -->
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p class="desk-user-data" style="flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; width: 552px; height: 25px; font-style: normal; font-weight: 700; font-size: 20px; line-height: 25px; color: #161F33;">
+                            <p class="desk-user-data" style="flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; height: 25px; font-style: normal; font-weight: 700; font-size: 20px; line-height: 25px; color: #161F33;">
                                 <b>
-                                    Ваши данные для входа в&nbsp;личный кабинет
+                                    Ваши данные для входа в личный кабинет
                                 </b>
                             </p>
-                            <p class="mob-user-data" style="flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; width: 552px; height: 25px; font-style: normal; font-weight: 700; font-size: 20px; line-height: 25px; color: #161F33;">
+                            <!-- <p class="mob-user-data" style="flex-direction: row; align-items: flex-start; padding: 0px; gap: 8px; width: 552px; height: 25px; font-style: normal; font-weight: 700; font-size: 20px; line-height: 25px; color: #161F33;">
                                 <b>
                                     Ваши данные для входа в <br>личный кабинет
                                 </b>
-                            </p>
+                            </p> -->
                         </td>
                     </tr>
                     <tr>
-                        <td class="email-pass">
+                        <td style="color: #161F33;" class="email-pass">
                             <p>Email: ${email} <br>
                                 Пароль: ${password}
                             </p>
                         </td>
                     </tr>
-                            <tr align="center" style="font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF; display: inline-flex; width: 162px; max-width: 170px; min-width: 162px; min-height: 48px">
-                                <td width="162px" class="btn-now" style="color: #FFFFFF;">
+                            <tr align="center" style="font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF; display: inline-flex; width: 162px; height: 48px">
+                                <td width="162px" style="color: #FFFFFF;">
                                     <form style="color: #FFFFFF; text-decoration: none; text-decoration-line: none;">
                                         <a style="text-decoration: none; text-decoration-line: none; font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF;" href="${companyDomain}" target="_blank">
-                                            <buton style="text-align: center; font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF; border-radius: 10px; text-decoration: none; background: #101A7D;" rel="noopener">
+                                            <button class="btn-now"
+                                            style="text-wrap: nowrap; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 12px 20px; gap: 10px; width: 162px; height: 48px; background: #101A7D; border-radius: 10px; border: 1px #101A7D;  font-family: 'Helvetica'; font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #FFFFFF;"
+                                            >
                                                 Начать сейчас
                                             </button>
                                         </a>
-                                        </buton>
                                 </td>
                             </tr>
                 <tr>
@@ -416,23 +433,26 @@
                 </tr>
                 <tr>
                     <td>
-                        <p class="desk-rec-first-use" style="width: 552px; height: 80px; font-family: 'Helvetica'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; color: #161F33; text-wrap: wrap;">
+                        <p class="desk-rec-first-use" style="height: 80px; font-family: 'Helvetica'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; color: #161F33; text-wrap: wrap;">
                             При первом доступе рекомендуем Вам изменить пароль через настройки профиля пользователя в&nbsp;пункте &laquo;Безопасность&raquo;, а&nbsp;также заполнить личную информацию в&nbsp;карточке профиля: фото, email, номер телефона, дата рождения и&nbsp;город текущего местоположения
                         </p>
-                        <p class="mob-rec-first-use" style="text-wrap: wrap">
-                            При первом доступе рекомендуем <br> Вам изменить пароль через <br> настройки профиля пользователя в <br> пункте &laquo;Безопасность&raquo;, а&nbsp;также <br> заполнить личную информацию в <br> карточке профиля: фото, email, <br> номер телефона, дата рождения и <br>город текущего местоположени
-                        </p>
+                        <!-- <p class="mob-rec-first-use" style="text-wrap: wrap">
+                            При первом доступе рекомендуем <br> Вам изменить пароль через <br> настройки профиля пользователя в <br> пункте &laquo;Безопасность&raquo;, а&nbsp;также <br> заполнить личную информацию в <br> карточке профиля: фото, email, <br> номер телефона, дата рождения и <br>город текущего местоположения
+                        </p> -->
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <form style="background-color: #FFFFFF; border: 2px solid #C9CFF1; text-decoration: none; text-decoration-line: none; color: #101A7D;">
-                            <a href="${companyDomain}" target="_blank">
-                                <button style="min-width: 192px; width: 192px; max-width: 192px;" class="change-data">
+                        <!-- <form style="background-color: #FFFFFF; border: 2px solid #C9CFF1; text-decoration: none; text-decoration-line: none; color: #101A7D;"> -->
+                            <a style="width: 192px; height: 48px; text-decoration: none;" href="${companyDomain}" target="_blank">
+                                <button
+                                style="box-sizing: border-box; justify-content: center; align-items: center; padding: 12px 20px 12px 20px; display: flex; text-wrap: nowrap; width: 192px; height: 48px; background: #FFFFFF; border: 2px solid #C9CFF1; border-radius: 50px; font-family: 'Helvetica'; font-style: normal; font-weight: 400; font-size: 18px; line-height: 17px; color: #101A7D;"
+                                class="change-data"
+                                >
                                     Изменить данные
                                 </button>
                             </a>
-                        </form>
+                        <!-- </form> -->
                     </td>
                 </tr>
                 <tr>
@@ -442,15 +462,17 @@
                         </p>
                     </td>
                 </tr>
-                <tr style="min-width: 288px; max-width: 552px">
-                    <td style="text-decoration: none; text-decoration-line: none; min-width: 288px; max-width: 552px">
-                        <form style="text-decoration: none; text-decoration-line: none; min-width: 288px; max-width: 552px">
-                            <a style="text-decoration: none; text-decoration-line: none; min-width: 288px; max-width: 552px" href="mailto:${this.config.getFrom()}" target="_blank">
-                                <button style="min-width: 288px; max-width: 552px; margin: 0 auto; min-height: 68px; border: 0; display: flex; flex-direction: row; justify-content: center; align-items: flex-start; padding: 24px 16px; gap: 16px; background: #4BC77C; border-radius: 8px; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; text-align: center; color: #FFFFFF;" class="contact-us" target="_blank">
-                                    Мы на связи 24/7
+                <tr>
+                    <td>
+                        <!-- <form style="text-decoration: none; text-decoration-line: none;"> -->
+                            <a class="a-contact" style="padding: 0%; margin: 0%; text-decoration: none; text-decoration-line: none" href="mailto:${this.config.getFrom()}" target="_blank">
+                                <button style="text-align: center; width: 552px; margin: 0 auto; height: 68px; border: 0; display: flex; flex-direction: row; justify-content: center; align-items: start; padding: 24px 16px; gap: 16px; background: #4BC77C; border-radius: 8px; font-style: normal; font-weight: 400; font-size: 16px; line-height: 20px; text-align: center; color: #FFFFFF;" class="contact-us" target="_blank">
+                                    <center>
+                                        Мы на связи 24/7
+                                    </center>
                                 </button>
                             </a>
-                        </form>
+                        <!-- </form> -->
                     </td>
                 </tr>
                 </tbody>
@@ -460,7 +482,6 @@
     </tbody>
 </table>
 <br/>
-</center>
 </td>
 </tr>
 </tbody>
